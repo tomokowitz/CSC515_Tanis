@@ -33,8 +33,14 @@
 	float: left; 
 	color: maroon; 
 }
-#mapheader {
+#mapheader div {
 	
-	
+	padding:10px;
+}
+#mapborder {
+	border:1px solid #ccc; padding:2px; background:#eee;
+}
+#lovecraft {
+	font-family:"Copperplate Gothic Light" 
 }
 --> 
