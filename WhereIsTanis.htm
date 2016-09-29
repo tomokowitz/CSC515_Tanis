@@ -2,33 +2,14 @@
     <head>
         <title>TODO supply a title</title>
         <link rel="stylesheet" href="okowitz2a.css" type="text/css" >
+<script type="text/javascript">
+function FunctionOver(myText)
+{ 
+  document.getElementById("mapMsg").innerHTML= myText ;
+}
+</script>
 
-      <!-- <STYLE TYPE="text/css"> 
- 
-   body {color: navy; background: azure} 
-  h1 {
-	color: navy;
-	font-size: small;
-	font-family: "Franklin Gothic Demi";
-	text-align: center;
-} 
-  td {color:  gray; background: azure;padding:20 20 20 20;} 
-  p  {
-	text-indent: .5in;
-	font-size: small;
-	margin-left: 5%;
-	margin-right: 5%;
-} 
-  a  {
-	color: #808080;
-	background: azure;
-	font-weight:bold;
-	font-size:medium;
-} 
-  a:hover {color: aqua; background: blue} 
-
-</STYLE> 
--->
+    
     </head>
     <body text="indigo" bgcolor="azure" >
         <div>
@@ -51,15 +32,16 @@
             <br>
             <map name="pugetmap">
             <area shape="rect" href="AmandaLake.htm" coords="0,50,100,150"
-                  alt="Amanda Lake" target="main">
+                  alt="Amanda Lake" target="main" onMouseOver="FunctionOver('Amanda Lake background');">
              <area shape="rect" href="Olympic.htm" coords="150,100,250,250"
-                  alt="Tanis Central" target="main">
+                  alt="Tanis Central" target="main" onMouseOver="FunctionOver('Olympia park background');">
              
              <area shape="rect" href="McNeilIsland.htm" coords="550,300,650,400"
-                  alt="McNeil Island" target="main">
+                  alt="McNeil Island" target="main" onMouseOver="FunctionOver('McNeil Island background');">
 			<area shape="rect" href="Dupont.htm" coords="575,450,650,500"
-                  alt="McNeil Island" target="main">
+                  alt="McNeil Island" target="main" onMouseOver="FunctionOver('Fort Nisqually background');">
 
             </map>
+            <span id="mapMsg"></span>
     </body>
 </html>

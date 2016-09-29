@@ -1,6 +1,15 @@
 ﻿<!-- 
    body {color: navy; background: azure} 
-  h1 {
+   body.Spooky {
+	background-color:black;
+}
+body.Dreamy {
+	background-color:fuchsia;
+}
+body.Tanis {
+	background-color:maroon;
+}
+  h1.Gothic {
 	color: navy;
 	font-size: small;
 	font-family: "Franklin Gothic Demi";
@@ -20,6 +29,9 @@
 	font-size:medium;
 } 
   a:hover {color: aqua; background: blue;} 
+  a.Menu {
+	font-style:oblique;
+}
           
   li:hover {
 	color:orange;background:blue;
