@@ -1,0 +1,146 @@
+﻿<html>
+        
+<head>
+<title>Mythos Search</title>
+        <link rel="stylesheet" href="okowitz2a.css" type="text/css" >
+        
+        <script type="text/javascript">
+			function MythosPkr(){
+				var nbrYear=document.getElementById("txtTargetYear").innerText;
+				var strEra = EraDateRange(nbrYear);
+				
+				
+				var strRec = ProcRec(strEra,  ,strAgeRtg);
+			}
+			function EraDateRange(nbrYear){
+				var strEra;
+				switch(nbrYear) {
+					case <1850:
+						alert("Whoah ... that's too old for me!  Please pick a year after 1850.");
+						case <1900:
+						strEra = "18th"
+				    case <1935:
+				        strEra="early_20"
+				        break;
+				    case <1975:
+				        strEra = "late_20"
+				        break;
+				    case <2017:
+				    	strEra = "21st"
+				        default 
+				        alert("Dude ... that's in the future!  Far out, too far out!.");
+
+				 return strEra;
+				
+			}
+			function ParseSubgenre
+			function ProcRec(strEra,strSubG,strAgeRtg){
+				var strIndex = strEra + 
+			
+			}
+			function GetImage(strRec){
+			
+			
+			
+			}
+			function DisplayRec(){
+			
+			}
+			function ValidSubG(){
+				var strSubG = document.getElementById("txtSubgenre").innerText;
+				
+				switch(strSugG) {
+				    case "Fantasy":
+				        break;
+				    case "Weird Fiction":
+				        
+				        break;
+				    case "Science Fiction":
+				        
+				        break;
+
+				    default:
+				        alert("Please enter on of the values provided"); 
+				        break;
+							
+			}
+			function ValidEra(){
+				var strSubG = document.getElementById("txtSubgenre").innerText;
+				
+				switch(strSugG) {
+				    case "Fantasy":
+				        break;
+				    case "Weird Fiction":
+				        
+				        break;
+				    case "Science Fiction":
+				        
+				        break;
+
+				    default:
+				        alert("Please enter one of the values provided"); 
+				        break;
+							
+			}
+			function ValidRtg(){
+				var strAgeRtg = document.getElementById("txtAgeRating").innerText;
+				
+				switch(strAgeRtg) {
+				    case "Adult":
+				          break;
+				    case "Youth":
+				        
+				        break;
+				    
+
+				    default:
+				        alert("Please enter one of the values provided"); 
+				        break;
+							
+			}
+
+
+		</script>
+
+</head>
+
+<body>
+<table>
+	<tr>
+		<td>
+		<table>
+			<tr>
+				<td>
+					<h3><label> Year in Target Eras (18th c., early 20th c., late 20th c., 21st c.)</label></h3>
+				</td>	
+				<td>
+					<input type="text" id="txtTargetYear">
+				</td>
+			</tr>
+			<tr>
+				<td><h3><label> Subgenre (Fantasy, Weird Fiction, Science Fiction)  </label></h3></td>
+				<td><input type="text" id="txtSubgenre" onkeyup="validSubG()"></td>
+		
+			</tr>
+			<tr>
+				<td><h3><label> Age Rating (Youth, Adult) </label></h3></td>
+				<td><input type="text" id="txtAgeRating" onkeypress="ValidRtg()"></td>
+		
+			</tr>
+			<tr>
+				<td><h3><label> Click to get your recommendation </label></h3></td>
+				<td><input type="submit" value="Find" onclick="fnMythosPkr()"></td>
+		
+			</tr>
+		</table>
+	</td>
+	<td>
+		<div id="display"> div is here
+	</div>
+
+	</td>
+	</tr></table>
+	
+</body>
+
+</html>
