@@ -7,7 +7,8 @@
 	function answer(a, b, c)
 	{
 		var answer = "How much is that " + a + " " + b + " " + c + " in the window?";
-		document.getElementById("answer_text").innerHTML = answer;
+		//document.getElementById("answer_text").innerHTML = answer;
+		return answer;
 	}
 </script>
 
@@ -16,10 +17,10 @@
 	var str1 = prompt("Enter a size","");
 	var str2 = prompt("Enter a colr","");
 	var str3 = prompt("Enter a pet","");
-	answer(str1, str2, str3);
-</script>
-<h1 id="answer_text"></h1>
+	var text = answer(str1, str2, str3);
+	document.writeln(text);
 
+</script>
 </body>
 
 </html>

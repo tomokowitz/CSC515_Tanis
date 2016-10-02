@@ -3,12 +3,67 @@
 <head>
  <link rel="stylesheet" href="okowitz2a.css" type="text/css" >
 <script type="text/javascript">
+	function CalcArea(a,b,c,b){
+	
+	var strShapeCk = ValidMsrs(b,c,d);
+	
+	if(a==="" or b ==="" or c==="" or d===""){
+		prompt('All fields are required.');
+		
+		}
+		else
+		{
+			if (a===strShapeCk){
+				case 'Square':
+				
+			}
+			else{
+			
+}		
+		
+		}
 
+		}
+	function ValidMsrs(side1,side2,side3) {
+		var shape;
+		if(a===b and b===c){
+				shape = 'Square';
+			}
+		else if(a===b and b<>c){
+				shape = 'Rectangle';
+			}
+		else if (a <> b and b <> c){
+				shape = 'Triangle';
+			}
+		else {
+				shape = 'Lovecraftian';
+			}
+		return shape;
+		}
+	}
 </script>
 
 </head>
 
 <body>
+
+	<p> Please choose a shape and choose sets of measurements for 3 sides:  </p>
+	<p> Shapes: Square, rectangle, triangle </p>
+	<p> Measurements: </p>
+	<p> 4, 4, 4 </p>
+	<p> 4, 4, 5 </p>
+	<p> 3, 4, 5 </p>
+
+<input type="text" name="shape" value="Enter shape here:">
+<br>
+<input type="text" name="side1" value="Enter first side measurement here:">
+<br>
+<input type="text" name="side2" value="Enter second side measurement here:">
+<br>
+<input type="text" name="side3" value="Enter third side measurement here:">
+<br>
+
+<input type="button" value="Click" onclick="CalcArea(shape.value,side1.value,side2.value,side3.value)">
 
 </body>
 
