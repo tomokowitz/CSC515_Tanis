@@ -11,18 +11,67 @@ a calculation occurs whenever
 	Have a button on this form that 
 	opens a new window to display information from the form.
 	
-	<script></script>
+	Use Math.PI, Math.cos(x), Math.tan(x), Math.sin(x),Math.sqrt(x)
+	
+	Will probably need to write this page dynamically
+	<script>
+	
+		function showShapes(shape)
+		{
+		
+		
+		}
+		function calcTriangle(side1, side2)
+		{
+		
+		
+		}
+		function calcSquare(side1)
+		{
+		
+			return Math.pow(side1,2);
+		}
+		function calcCircle(radius)
+		{
+		
+			return Math.PI * Math.pow(radius,2); 
+
+		}
+		function calcCyclops
+		{
+		
+		
+		}
+
+
+	</script>
 </head>
 
 <body>
 
-<input type="radio">
+<p>
+<select>
+	<option> triangle </option>
+	<option> square </option>
+	<option> circle </option>
+	<option> irregular polygon </option>
+</select>
+</p>
+<div> div is here <img alt="" src="Images/Geometry/GoogleOrangeTriangle.jpg" width="100" ></div>
 
-<input type="checkbox">
+<p>
+<br><input type="radio" name="size" value="3" checked="true"> small
+<br><input type="radio" name="size" value="10"> medium
+<br><input type="radio" name="size" value="50"> large
+<br><input type="radio" name="size" value="random"> whatever
+</p>
+<p>
+<br><input type="checkbox" name="cbColor" value="color"> Click for a colored shape
+<br><input type="checkbox" name="cbFace" value="smiley"> Click for a smiley face with your shape
+<br><input type="checkbox" name="cbBlink" value="blink"> Click for some animation of your shape
 
-<select></select>
-
-
+</p>
+<input type="button" value="Let 'er rip!">
 </body>
 
 </html>
