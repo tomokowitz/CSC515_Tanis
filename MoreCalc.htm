@@ -13,6 +13,7 @@ a calculation occurs whenever
 	
 	Use Math.PI, Math.cos(x), Math.tan(x), Math.sin(x),Math.sqrt(x)
 	
+	Will probably need to write this page dynamically
 	<script>
 	
 		function showShapes(shape)
@@ -28,12 +29,13 @@ a calculation occurs whenever
 		function calcSquare(side1)
 		{
 		
-		
+			return Math.pow(side1,2);
 		}
 		function calcCircle(radius)
 		{
 		
-		
+			return Math.PI * Math.pow(radius,2); 
+
 		}
 		function calcCyclops
 		{
@@ -55,7 +57,7 @@ a calculation occurs whenever
 	<option> irregular polygon </option>
 </select>
 </p>
-<div> div is here </div>
+<div> div is here <img alt="" src="Images/Geometry/GoogleOrangeTriangle.jpg" width="100" ></div>
 
 <p>
 <br><input type="radio" name="size" value="3" checked="true"> small
