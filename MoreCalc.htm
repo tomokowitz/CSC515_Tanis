@@ -11,20 +11,32 @@ a calculation occurs whenever
 	Have a button on this form that 
 	opens a new window to display information from the form.
 	
-	Use Math.PI, Math.cos(x), Math.tan(x), Math.sin(x),Math.sqrt(x)
+	Use Math.PI, Math.sqrt(x)
 	
 	Will probably need to write this page dynamically
 	<script>
-	
+		
+		function getShape()
+		{
+		
+		}
+		
 		function showShapes(shape)
 		{
 		
 		
 		}
-		function calcTriangle(side1, side2)
+		function calcTriangle(side1, side2, side3)
 		{
-		
-		
+			var area;
+			var per = side1 + side2 + side3;
+			var p = per/2;
+			var prod = p * (p-side1)*(p-side2)*(p-side3);
+			area = Math.sqrt(prod);
+			return area;
+			
+	
+			
 		}
 		function calcSquare(side1)
 		{
@@ -70,20 +82,19 @@ a calculation occurs whenever
 <body>
 
 <p>
-<select>
+<select name="selShape">
 	<option> triangle </option>
 	<option> square </option>
 	<option> circle </option>
 	<option> irregular polygon </option>
 </select>
 </p>
-<div> div is here <img alt="" src="Images/Geometry/GoogleOrangeTriangle.jpg" width="100" ></div>
+<div> div is here <img name="mypic" alt="" src="Images/Geometry/GoogleOrangeTriangle.jpg" width="100" ></div>
 
 <p>
 <br><input type="radio" name="size" value="3" checked="true"> small
 <br><input type="radio" name="size" value="10"> medium
 <br><input type="radio" name="size" value="50"> large
-<br><input type="radio" name="size" value="random"> whatever
 </p>
 <p>
 <br><input type="checkbox" name="cbColor" value="color"> Click for a colored shape
@@ -91,7 +102,7 @@ a calculation occurs whenever
 <br><input type="checkbox" name="cbBlink" value="blink"> Click for some animation of your shape
 
 </p>
-<input type="button" value="Let 'er rip!">
+<input type="button" value="Let 'er rip!" onclick="getShape()">
 </body>
 
 </html>
