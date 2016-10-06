@@ -5,13 +5,14 @@
 <script>
 pictures = new Array(3); // elements 0..2
 var index = 0;
-pictures[0] = "Images/MythosPkr/early20FantasyAdult.jpg";
-pictures[1] = "Images/MythosPkr/early20FantasyYouth.jpg";
+pictures[0] = "Images/MtnsMadness.jpg";
+pictures[1] = "Images/RoadsideZone.jpg";
 pictures[2] = "Images/MythosPkr/early20ScienceAdult.jpg";
 
 function animate()
 {
   document.pic1.src=pictures[index % 3];
+ /* document.text1.value = "555";*/
   index++;
   setTimeout("animate()", 10000);
 }
@@ -21,6 +22,7 @@ function animate()
 <!--<body>-->
 <center>
 <img alt="" SRC="Images/MythosPkr/early20ScienceAdult.jpg" NAME="pic1" height=200 width=200> 
+<div name="text1"> dive here </div>
 </center>
 <p>
 <a href="js4.htm#ex11"> Go Back </a>
