@@ -2,23 +2,56 @@
 
 <head>
 Write a JavaScript program that in response to a user event changes a style property of an object.
+
+Simple:  select control with themes setting several formatting properties(bkground color, font style, etc)
 <title>Chasing </title>
 
 
-function changeBackgroundColor()
+function changeBackgroundColor(theme)
 {
   var theNode = getObj("message");
   var newColor=prompt("Enter a color.","yellow");
   theNode.style.backgroundColor=newColor;
 }
+function changeFont(theme)
+{
+
+}
+function changeImage(theme)
+{
 
 
+}
+function changeTheme()
+{
+	
+	var index = selectTheme.selectedIndex;
+	var theme = selTheme.options[index].value;
+	
+	changeBackgroundColor(theme);
+	changeFont(theme);
+	changeImage(theme):
+}
 
 
 </head>
 
 <body>
 
+	<select name="selectTheme" onchange="changeTheme()">
+		<option> Tanis </option>
+		<option> Lovecraft's From Beyond </option>
+		<option> Roadside Picnic </option>
+	
+	</select>
+	
+	<div id="palate">
+		<label id="blurb">
+			This is a sample of your theme.
+		</label>
+		<img src="/Images/KeepLooking.png" width="200" alt="">
+		
+	</div>
 </body>
 
 </html>
