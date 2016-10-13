@@ -1,0 +1,56 @@
+﻿<html>
+
+<head>
+Write 3 JavaScript programs examples where you change the DOM (not just style properties). 
+This means adding nodes to the DOM or deleting nodes from the DOM. 
+These should not be identical to class examples.
+
+imitate loss of time?
+ 
+imitate "the calm"
+switch from Tanis-related to Lovecraft-(or Roadside Picnic-)related items
+
+<title>?????????? 
+</title>
+
+
+function getObj(elementID)
+{
+  return document.getElementById(elementID);
+}
+
+function changeObj()
+{
+  var theNode = getObj("?????????");
+  var new????Node=document.createTextNode(???????);
+	var new????Item = document.createElement("LI");
+  new????Item.appendChild(new????Node);
+  theNode.replaceChild(new????Item, theNode.childNodes[index]);
+}
+/* need to rename*/
+function getChild(node, index)
+// returns the index child of the node
+// ignore text nodes
+
+{
+  count = -1;
+  for (i = 0; i < node.childNodes.length; i++)
+  { 
+     if (node.childNodes[i].nodeType == 1) // 3 for textnode
+ 	{
+    	count++;
+    	if (count == index)
+    	{
+          return node.childNodes[i];
+        }
+ 	}
+  }
+}
+
+</head>
+
+<body>
+
+</body>
+
+</html>
