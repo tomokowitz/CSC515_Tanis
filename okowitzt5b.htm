@@ -12,7 +12,7 @@ var x = 50;
 
 function init()
 {
-	startAnim();
+//	startAnim();
 }
 
 /*functions to start and stop the animation*/
@@ -24,13 +24,14 @@ function startAnim()
 	}
 }
 
-function stopAnim()
+/*function stopAnim()
 {
 	clearInterval(timerID);
 	timerID="";
 }
-
-function animate()/* may need to duplicate/adapt this for two objects*/
+*/
+/* may need to duplicate/adapt this for two objects*/
+function animate()
 {
     if (y <= -150)
     {
@@ -43,11 +44,13 @@ function animate()/* may need to duplicate/adapt this for two objects*/
     }
     y = y + change;
     x = x + 5;   
-    /*shiftTo(x, y, 2);
-*/    shiftCthuhluTo(x, y, 2);
-	shiftCuddleTo(x+100, y, 2);/* add 100 to the y coord for cuddlefish?
+    shiftCthuhluTo(x, y, 2);
+	shiftCuddleTo(x+100, y, 2);
+	
+/* add 100 to the y coord for cuddlefish?*/
 
 }
+
 
 function getObj(elementID)
 {
@@ -109,7 +112,7 @@ y pos <input type="text" id="fyloc" value="0" size="5">
 </div>
 <div id="title1">Flying Cthuhlu</div>
 <div id="title2">Flying Cuddlefish</div>
-<img src="Images/cthulu.jpg" id="cthuhlu" width="110" height="150" alt="">
+<img src="Images/Cthulu.jpg" id="cthuhlu" width="110" height="150" alt="">
 <img src="Images/cephalopod1.jpg" id="cuddle" width="110" height="150" alt="">
 
 </body>
