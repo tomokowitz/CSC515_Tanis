@@ -43,7 +43,10 @@ function animate()/* may need to duplicate/adapt this for two objects*/
     }
     y = y + change;
     x = x + 5;   
-    shiftTo(x, y, 2);
+    /*shiftTo(x, y, 2);
+*/    shiftCthuhluTo(x, y, 2);
+	shiftCuddleTo(x+100, y, 2);/* add 100 to the y coord for cuddlefish?
+
 }
 
 function getObj(elementID)
@@ -100,14 +103,14 @@ y pos <input type="text" id="uyloc" value="0" size="5"></p>
 <br><br>
 Cuddlefish position:<br><br>
 x pos <input type="text" id="fxloc" value="0" size="5"><br><br>
-y pos <input type="text" id="fyloc" value="0" size="5"></p>
+y pos <input type="text" id="fyloc" value="0" size="5">
 
 </form>
 </div>
 <div id="title1">Flying Cthuhlu</div>
 <div id="title2">Flying Cuddlefish</div>
-<img src="cthulu.jpg" id="bird" width="110" height="150">
-<img src="cephalopod1.jpg" id="bird" width="110" height="150">
+<img src="Images/cthulu.jpg" id="cthuhlu" width="110" height="150" alt="">
+<img src="Images/cephalopod1.jpg" id="cuddle" width="110" height="150" alt="">
 
 </body>
 </html>
