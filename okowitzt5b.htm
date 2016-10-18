@@ -12,7 +12,7 @@ var x = 50;
 
 function init()
 {
-//	startAnim();
+	startAnim();
 }
 
 /*functions to start and stop the animation*/
@@ -24,12 +24,12 @@ function startAnim()
 	}
 }
 
-/*function stopAnim()
+function stopAnim()
 {
 	clearInterval(timerID);
 	timerID="";
 }
-*/
+
 /* may need to duplicate/adapt this for two objects*/
 function animate()
 {
@@ -45,8 +45,8 @@ function animate()
     y = y + change;
     x = x + 5;   
     shiftCthuhluTo(x, y, 2);
-	shiftCuddleTo(x+100, y, 2);
-	
+	/*shiftCuddleTo(x, y, 2);
+*/	
 /* add 100 to the y coord for cuddlefish?*/
 
 }
@@ -68,15 +68,16 @@ function shiftCthuhluTo(x,y,z)
   getObj('uyloc').value = y;
 }
 
-function shiftCuddleTo(x,y,z)
+/*function shiftCuddleTo(x,y,z)
 {
+	x += 100;
   getObj('cuddle').style.left = x + "px";
   getObj('cuddle').style.top = y + "px";
   getObj('cuddle').style.zIndex = z;
   getObj('fxloc').value = x;
   getObj('fyloc').value = y;
 }
-
+*/
 </script>
 <style type="text/css">
 #title1 { position:absolute;  left:200px; top:80px; 
@@ -104,16 +105,17 @@ Cthuhlu position:<br><br>
 x pos <input type="text" id="uxloc" value="0" size="5"><br><br>
 y pos <input type="text" id="uyloc" value="0" size="5"></p>
 <br><br>
-Cuddlefish position:<br><br>
+<!--Cuddlefish position:<br><br>
 x pos <input type="text" id="fxloc" value="0" size="5"><br><br>
 y pos <input type="text" id="fyloc" value="0" size="5">
 
+-->
 </form>
 </div>
 <div id="title1">Flying Cthuhlu</div>
-<div id="title2">Flying Cuddlefish</div>
+<div id="title2">Flying Cthuhlu</div>
 <img src="Images/Cthulu.jpg" id="cthuhlu" width="110" height="150" alt="">
-<img src="Images/cephalopod1.jpg" id="cuddle" width="110" height="150" alt="">
-
+<!--<img src="Images/cephalopod1.jpg" id="cuddle" width="110" height="150" alt="">
+-->
 </body>
 </html>
