@@ -18,10 +18,26 @@ Use timer to automate these changes?
 		Build a list of items where, at max # items, adding one means removing one
 		
 
-<title>?????????? 
+<title>Writing Nodes to the Dom 
 </title>
 <script>
+function scriptZero()
+{
 
+}
+function scriptOne()
+{
+
+}
+function scriptTwo()
+{
+
+
+}
+function scriptThree()
+{
+
+}
 function getObj(elementID)
 {
   return document.getElementById(elementID);
@@ -57,8 +73,37 @@ function getChild(node, index)
 </script>
 </head>
 
-<body>
+<body onload="scriptZero()">
+<br>
+<input name="firstBtn" type="button" onclick="scriptOne()" value="click me first">
+<br>
+<div id="firstInstructions"></div>
+<br>
+<input name="secondBtn" type="button" onclick="scriptTwo()" value="click me next">
 
+<br>
+<div id="secondInstructions"></div>
+<br>
+
+<input name="thirdBtn" type="button" onclick="scriptThree()" value="click me last">
+<div id="thirdInstructions"></div>
+<br>
+
+<div>
+	<ul>
+	
+	</ul>
+
+</div>
+	<div>
+		<select>
+			<option></option>
+		</select>
+	</div>
+	<div>
+		<input type="radio">
+	</div>
+	
 </body>
 
 </html>
