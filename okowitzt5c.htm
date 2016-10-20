@@ -51,40 +51,53 @@ function getObj(elementID)
 function changeUL()
 {
   var theNode = getObj("genres");
-  var new????Node=document.createTextNode(???????);
-	var new????Item = document.createElement("LI");
-  new????Item.appendChild(new????Node);
-  theNode.replaceChild(new????Item, theNode.childNodes[index]);
+  var newGenreNode=document.createTextNode(???????);
+	var newGenreItem = document.createElement("LI");
+  newGenreItem.appendChild(newGenreNode);
+  theNode.replaceChild(newGenreItem, theNode.childNodes[index]);
 }
 function changeSelect()
 {
   var theNode = getObj("aspects");
-  var new????Node=document.createTextNode(???????);
-	var new????Item = document.createElement("LI");
-  new????Item.appendChild(new????Node);
-  theNode.replaceChild(new????Item, theNode.childNodes[index]);
+  var newAspectNode=document.createTextNode(???????);
+	var newAspectItem = document.createElement("LI");
+  newAspectItem.appendChild(newAspectNode);
+  theNode.replaceChild(newAspectItem, theNode.childNodes[index]);
 }
 function changeRadio()
 {
   var theNode = getObj("ghostradio");
-  var new????Node=document.createTextNode(???????);
-	var new????Item = document.createElement("LI");
-  new????Item.appendChild(new????Node);
-  theNode.replaceChild(new????Item, theNode.childNodes[index]);
+  var newRadioNode=document.createTextNode(???????);
+	var newRadioItem = document.createElement("LI");
+	
+	
+	newRadioButton = document.createElement("INPUT");
+   		newRadioButton.setAttribute("type", "radio");
+   		newRadioButton.setAttribute("name", "teams");
+   		newRadioButton.setAttribute("value", newTeam);
+   		newRadioButton.setAttribute("onclick", "rooting(this)");
+
+	
+	
+	
+	
+	
+  newRadioItem.appendChild(newRadioNode);
+  theNode.replaceChild(newRadioItem, theNode.childNodes[index]);
 }
 function makeCollage()
 {
-  var theNode = getObj("?????????");
-  var new????Node=document.createTextNode(???????);
-	var new????Item = document.createElement("LI");
-  new????Item.appendChild(new????Node);
-  theNode.replaceChild(new????Item, theNode.childNodes[index]);
+  var theNode = getObj("collage");
+  var newCollageNode=document.createTextNode(???????);
+	var newCollageItem = document.createElement("LI");
+  newCollageItem.appendChild(newCollageNode);
+  theNode.replaceChild(newCollageItem, theNode.childNodes[index]);
 }
 
 
 
 /* need to rename*/
-function getChild(node, index)
+/*function getChild(node, index)
 // returns the index child of the node
 // ignore text nodes
 
@@ -102,7 +115,7 @@ function getChild(node, index)
  	}
   }
 }
-</script>
+*/</script>
 </head>
 
 <body onload="scriptZero()">
@@ -135,7 +148,8 @@ function getChild(node, index)
 	<div id="ghostradio">
 		<input type="radio" >
 	</div>
-	
+	<div id="collage">
+	</div>
 </body>
 
 </html>
