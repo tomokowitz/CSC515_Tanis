@@ -48,7 +48,31 @@ function getObj(elementID)
   return document.getElementById(elementID);
 }
 
-function changeObj()
+function changeUL()
+{
+  var theNode = getObj("genres");
+  var new????Node=document.createTextNode(???????);
+	var new????Item = document.createElement("LI");
+  new????Item.appendChild(new????Node);
+  theNode.replaceChild(new????Item, theNode.childNodes[index]);
+}
+function changeSelect()
+{
+  var theNode = getObj("aspects");
+  var new????Node=document.createTextNode(???????);
+	var new????Item = document.createElement("LI");
+  new????Item.appendChild(new????Node);
+  theNode.replaceChild(new????Item, theNode.childNodes[index]);
+}
+function changeRadio()
+{
+  var theNode = getObj("ghostradio");
+  var new????Node=document.createTextNode(???????);
+	var new????Item = document.createElement("LI");
+  new????Item.appendChild(new????Node);
+  theNode.replaceChild(new????Item, theNode.childNodes[index]);
+}
+function makeCollage()
 {
   var theNode = getObj("?????????");
   var new????Node=document.createTextNode(???????);
@@ -56,6 +80,9 @@ function changeObj()
   new????Item.appendChild(new????Node);
   theNode.replaceChild(new????Item, theNode.childNodes[index]);
 }
+
+
+
 /* need to rename*/
 function getChild(node, index)
 // returns the index child of the node
@@ -95,18 +122,18 @@ function getChild(node, index)
 <br>
 
 <div>
-	<ul>
+	<ul id="genres">
 	
 	</ul>
 
 </div>
 	<div>
-		<select>
+		<select id="aspects">
 			<option></option>
 		</select>
 	</div>
-	<div>
-		<input type="radio">
+	<div id="ghostradio">
+		<input type="radio" >
 	</div>
 	
 </body>
