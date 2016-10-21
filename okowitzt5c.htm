@@ -24,16 +24,31 @@ Use timer to automate these changes?
 function scriptZero()
 {
 	// here will write  directions for first button
-
+	var para = document.createElement("P");                       // Create a <p> element
+	var t = document.createTextNode("This is a paragraph.");      // Create a text node
+	para.appendChild(t);                                          // Append the text to <p>
+	document.getElementById("firstInstructions").appendChild(para); 
+	changeUL();
 }
 function scriptOne()
 {
 	// here will write  directions for second button
+	var para = document.createElement("P");                       // Create a <p> element
+	var t = document.createTextNode("This is a paragraph.");      // Create a text node
+	para.appendChild(t);                                          // Append the text to <p>
+	document.getElementById("secondInstructions").appendChild(para); 
+
 	// and populate unordered list
 }
 function scriptTwo()
 {
 // here will write  directions for third button
+// here will write  directions for second button
+	var para = document.createElement("P");                       // Create a <p> element
+	var t = document.createTextNode("This is a paragraph.");      // Create a text node
+	para.appendChild(t);                                          // Append the text to <p>
+	document.getElementById("thirdInstructions").appendChild(para); 
+
 	// and populate select list
 
 
@@ -50,13 +65,32 @@ function getObj(elementID)
 
 function changeUL()
 {
-  var theNode = getObj("genres");
-  var newGenreNode=document.createTextNode(???????);
+  var theNode = getObj("stories");
+  // array of stories
+  var stories[];
+  stories[0] = "Roadside Picnic";
+  stories[1] = "Tanis";
+  stories[2] = "Call of Cthuhlu";
+  var str;
+  
+  for (i = 0; i++; i=2)
+  {
+  	var newStoryNode=document.createTextNode(stories[i]);
 	var newGenreItem = document.createElement("LI");
-  newGenreItem.appendChild(newGenreNode);
-  theNode.replaceChild(newGenreItem, theNode.childNodes[index]);
+  	newStoryItem.appendChild(newStoryNode);
+  }
+  
+  
+//  theNode.replaceChild(newGenreItem, theNode.childNodes[index]);
+
+/*	var newStoryNode=document.createTextNode();
+	var newGenreItem = document.createElement("LI");
+  	newStoryItem.appendChild(newStoryNode);
+*/
 }
-function changeSelect()
+
+
+/*function changeSelect()
 {
   var theNode = getObj("aspects");
   var newAspectNode=document.createTextNode(???????);
@@ -64,7 +98,9 @@ function changeSelect()
   newAspectItem.appendChild(newAspectNode);
   theNode.replaceChild(newAspectItem, theNode.childNodes[index]);
 }
-function changeRadio()
+*/
+
+/*function changeRadio()
 {
   var theNode = getObj("ghostradio");
   var newRadioNode=document.createTextNode(???????);
@@ -85,7 +121,9 @@ function changeRadio()
   newRadioItem.appendChild(newRadioNode);
   theNode.replaceChild(newRadioItem, theNode.childNodes[index]);
 }
-function makeCollage()
+*/
+
+/*function makeCollage()
 {
   var theNode = getObj("collage");
   var newCollageNode=document.createTextNode(???????);
@@ -93,7 +131,7 @@ function makeCollage()
   newCollageItem.appendChild(newCollageNode);
   theNode.replaceChild(newCollageItem, theNode.childNodes[index]);
 }
-
+*/
 
 
 /* need to rename*/
@@ -135,7 +173,7 @@ function makeCollage()
 <br>
 
 <div>
-	<ul id="genres">
+	<ul id="stories">
 	
 	</ul>
 
