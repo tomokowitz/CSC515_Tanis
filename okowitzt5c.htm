@@ -1,10 +1,7 @@
 ﻿<html>
 
 <head>
-Write 3 JavaScript programs examples where you change the DOM (not just style properties). 
-This means adding nodes to the DOM or deleting nodes from the DOM. 
-These should not be identical to class examples.
-
+<link rel="stylesheet" href="okowitz2a.css" type="text/css" >
 Use timer to automate these changes?
 
 1- imitate loss of time?
@@ -25,16 +22,17 @@ function scriptZero()
 {
 	// here will write  directions for first button
 	var para = document.createElement("P");                       // Create a <p> element
-	var t = document.createTextNode("This is a paragraph.");      // Create a text node
+	var t = document.createTextNode("Click on the button below to start.");      // Create a text node
 	para.appendChild(t);                                          // Append the text to <p>
 	document.getElementById("firstInstructions").appendChild(para); 
-	changeUL();
+//	changeUL();
 }
 function scriptOne()
 {
+	changeSelect();
 	// here will write  directions for second button
 	var para = document.createElement("P");                       // Create a <p> element
-	var t = document.createTextNode("This is a paragraph.");      // Create a text node
+	var t = document.createTextNode("Select an option and click the next button.");      // Create a text node
 	para.appendChild(t);                                          // Append the text to <p>
 	document.getElementById("secondInstructions").appendChild(para); 
 
@@ -42,10 +40,11 @@ function scriptOne()
 }
 function scriptTwo()
 {
-// here will write  directions for third button
+		changeRadio()
+
 // here will write  directions for second button
 	var para = document.createElement("P");                       // Create a <p> element
-	var t = document.createTextNode("This is a paragraph.");      // Create a text node
+	var t = document.createTextNode("Select the desired element and click the last button.");      // Create a text node
 	para.appendChild(t);                                          // Append the text to <p>
 	document.getElementById("thirdInstructions").appendChild(para); 
 
@@ -56,6 +55,7 @@ function scriptTwo()
 function scriptThree()
 {
 	// here will draw collage based on selected options
+	makeCollage()
 
 }
 function getObj(elementID)
@@ -63,23 +63,25 @@ function getObj(elementID)
   return document.getElementById(elementID);
 }
 
-function changeUL()
+function changeSelect()
 {
   var theNode = getObj("stories");
+  
   // array of stories
-  var stories[];
-  stories[0] = "Roadside Picnic";
-  stories[1] = "Tanis";
-  stories[2] = "Call of Cthuhlu";
+  var stories=["Roadside Picnic", "Tanis", "Call of Cthuhlu"];
   var str;
   
-  for (i = 0; i++; i=2)
+  for (i = 0; i < 3; i++)
   {
-  	var newStoryNode=document.createTextNode(stories[i]);
-	var newGenreItem = document.createElement("LI");
-  	newStoryItem.appendChild(newStoryNode);
+  	/*var newStoryNode=document.createTextNode(stories[i]);
+*/  	
+	var newStoryOption = document.createElement("option");
+	newStoryOption.text = stories[i];
+//  	newStoryOption.appendChild(newStoryNode);
+  	theNode.add(newStoryOption);
   }
   
+  theNode.value = stories[0];
   
 //  theNode.replaceChild(newGenreItem, theNode.childNodes[index]);
 
@@ -90,48 +92,69 @@ function changeUL()
 }
 
 
-/*function changeSelect()
+function changeRadio()
 {
-  var theNode = getObj("aspects");
-  var newAspectNode=document.createTextNode(???????);
-	var newAspectItem = document.createElement("LI");
-  newAspectItem.appendChild(newAspectNode);
-  theNode.replaceChild(newAspectItem, theNode.childNodes[index]);
-}
-*/
+  	var theNode = getObj("ghostradio");
+  	var story = getObj("stories").value;
+  	var list;
+  	switch(story)
+  	{
+  		case "Roadside Picnic":
+  			list=["gravity","lovecraftian","dimension rift"];
+  		break;
+  		case "Tanis":
+  			list=["losing time","cephalopods","carter"];
 
-/*function changeRadio()
-{
-  var theNode = getObj("ghostradio");
-  var newRadioNode=document.createTextNode(???????);
-	var newRadioItem = document.createElement("LI");
-	
-	
-	newRadioButton = document.createElement("INPUT");
+  		break;
+		default:
+			list=["losing time","cephalopods","carter"];
+
+		break;
+  	
+  	}
+  	
+  	for (i = 0; i < 3; i++)
+  	{
+  	
+  	
+		var newRadioButton = document.createElement("INPUT");
+		newRadioButton.setAttribute("type", "checkbox");
+		newRadioButton.setAttribute("name", "aspects");
+		newRadioButton.setAttribute("value", list[i]);
+		theNode.appendChild(newRadioButton);
+		theNode.appendChild(document.createTextNode(list[i])); 
+  	}
+  	/*var newRadioButton = document.createElement("INPUT");
    		newRadioButton.setAttribute("type", "radio");
    		newRadioButton.setAttribute("name", "teams");
    		newRadioButton.setAttribute("value", newTeam);
    		newRadioButton.setAttribute("onclick", "rooting(this)");
 
-	
+	var newRadioNode=document.createTextNode(???????);
+	var newRadioItem = document.createElement("LI");
 	
 	
 	
 	
   newRadioItem.appendChild(newRadioNode);
   theNode.replaceChild(newRadioItem, theNode.childNodes[index]);
-}
 */
+}
 
-/*function makeCollage()
+
+function makeCollage()
 {
-  var theNode = getObj("collage");
-  var newCollageNode=document.createTextNode(???????);
-	var newCollageItem = document.createElement("LI");
-  newCollageItem.appendChild(newCollageNode);
-  theNode.replaceChild(newCollageItem, theNode.childNodes[index]);
+  	var theNode = getObj("collage");
+  	var story = getObj("stories").value;
+  	// need to look at check boxes and get checked values
+  	
+  	var newCollageNode=document.createElement(img);
+  	newCollageNode.src=".jpg";
+  	theNode.appendChild(newCollageNode);
+  	
+	
 }
-*/
+
 
 
 /* need to rename*/
@@ -157,35 +180,42 @@ function changeUL()
 </head>
 
 <body onload="scriptZero()">
+<div id="firstInstructions"></div>
+<br>
+
 <br>
 <input name="firstBtn" type="button" onclick="scriptOne()" value="click me first">
 <br>
-<div id="firstInstructions"></div>
+<div id="secondInstructions"></div>
+
 <br>
+<div>
+		<select id="stories">
+			
+		</select>
+	</div>
+	<br>
 <input name="secondBtn" type="button" onclick="scriptTwo()" value="click me next">
 
 <br>
-<div id="secondInstructions"></div>
-<br>
-
-<input name="thirdBtn" type="button" onclick="scriptThree()" value="click me last">
 <div id="thirdInstructions"></div>
+<br>
+<div id="ghostradio">
+		
+	</div>
+	<br>
+<input name="thirdBtn" type="button" onclick="scriptThree()" value="click me last">
 <br>
 
 <div>
-	<ul id="stories">
+
+<!--	<ul id="stories">
 	
 	</ul>
-
+-->
 </div>
-	<div>
-		<select id="aspects">
-			<option></option>
-		</select>
-	</div>
-	<div id="ghostradio">
-		<input type="radio" >
-	</div>
+	
+	
 	<div id="collage">
 	</div>
 </body>
