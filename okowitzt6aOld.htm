@@ -1,26 +1,21 @@
-﻿<html>
+﻿<html >
 
 <head>
-<link rel="stylesheet" href="References/okowitz2a.css" type="text/css" > 
-<STYLE TYPE="text/css"> 
-<!-- 
+Make a pull-down menu in a new file that includes selections for the other parts of the homework. 
+If you want a different sort of menu, that's OK also. But it is not OK to just have a select form element - 
+you did this already in an earlier assignment
+Your new file should be named <lastname>6.htm. For me, it would be avitabile6.htm.
+There should be links to your new page from your original start page.
+When you are finished, your email should include the links to the page where the JavaScript is located.
+Something like:
 
-  body {color: silver; background: maroon; vertical-align:middle } 
-  h1 {
-	color: SILVER;
-	font-weight:bolder;
-	font-size: x-large;
-	font-family: "Franklin Gothic Demi";
-	text-align: center;
-	} 
+http://66.195.8.98/~avitabij/homework6/avitabile6.htm
 
-  
-} 
---> 
-</STYLE> 
-
+ 
+<title>Untitled 1</title>
 <script src="References/browsercodelibrary.js"></script>
 <script src="References/codelibrary.js"></script>
+ <link rel="stylesheet" href="References/okowitz2a.css" type="text/css" >
 <script type="text/javascript" language="javascript">
 
 var itembg = "maroon";
@@ -62,11 +57,17 @@ function goPage(thisobj,menunum,itemnum){
 }
 
 </script>
-
 </head>
-<body>
-		<h1>  THE MYSTERY OF TANIS   </h1>
-		<div id="menubar1" class="menubar">
+
+<body onload="checkDOM('okowitzt6a.htm');">
+
+<!--menubar - positioned relative to the window-->
+<!--creates positioning context for menu1, menu2-->
+<!--menu1 - absolute positioned 0,0 relative to menubar-->
+<!--creates positioning context for menutitle1, dropdown1-->
+<!--menu2 - absolute positioned 150,0 relative to menubar-->
+<!--creates positioning context for menutitle2, dropdown2-->
+<div id="menubar1" class="menubar">
   <div id="menu1" onmouseover="dropmenu('1');" 
                   onmouseout="hidemenu('1');">
     <div id="menutitle1" class="menutitle">Mythos Research Tools</div>
@@ -97,6 +98,10 @@ function goPage(thisobj,menunum,itemnum){
   </div>
 
 </div>
+
+<p>Move the mouse over the menu names to see the hidden drop down
+menus.</p>
+
 
 </body>
 
