@@ -66,6 +66,9 @@ h1, h2, b 	{font-family:sans-serif; color:navy;}
 
 #menu2 { position:absolute; left:300px; top:0px; width:300px;}
 
+#menu3 { position:absolute; left:600px; top:0px; width:300px;}
+
+
 .menutitle {
 	background:#66CCCC; color:maroon; font-weight:bolder;
 	border: 1px solid navy; padding:0px; position:absolute; 
