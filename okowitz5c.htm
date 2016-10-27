@@ -94,7 +94,7 @@ function changeRadio()
 
   		break;
 		default:
-			list=["losing time","cephalopods","carter"];
+			list=["beyond","Cthuhlu","carter"];
 
 		break;
   	
@@ -127,18 +127,74 @@ function changeRadio()
   theNode.replaceChild(newRadioItem, theNode.childNodes[index]);
 */
 }
-
+function getCheckedBoxes(chkboxName)
+{
+	var checkboxes = document.getElementsByName(chkboxName);
+  	var checkboxesChecked = [];
+  	// loop over them all
+  	for (var i=0; i<checkboxes.length; i++) {
+     // And stick the checked ones onto an array...
+     if (checkboxes[i].checked) {
+        checkboxesChecked.push(checkboxes[i]);
+     }
+  }
+  // Return the array if it is non-empty, or null
+  return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+  }
 
 function makeCollage()
 {
   	var theNode = getObj("collage");
   	var story = getObj("stories").value;
   	// need to look at check boxes and get checked values
-  	
-  	var newCollageNode=document.createElement(img);
-  	newCollageNode.src=".jpg";
+  	var boxesChecked = getCheckedBoxes("aspects");
+  	for(var i=0;i<boxesChecked.length;i++)
+  	{
+  		var cbValue = boxesChecked[i].value;
+  		var newCollageNode=document.createElement("img");
+  	switch (cbValue)
+  	{
+  		case "gravity":
+  			newCollageNode.src="Images/RoadsideGravity.jpg";
+  		break;
+  		case "lovecraftian":
+  			newCollageNode.src="Images/LovecraftPortrait.jpg";
+
+  		break;
+  		case "dimension rift":
+  			newCollageNode.src="Images/RoadsideZone.jpg";
+
+  		break;
+
+  		case "losing time":
+  			newCollageNode.src="Images/DaliTime.jpg";
+  		break;
+  		case "cephalopods":
+  			newCollageNode.src="Images/cephalopod2.jpg";
+
+  		break;
+		case "carter":
+  			newCollageNode.src="Images/RandolphCarter.jpeg";
+
+  		break;
+
+  		case "beyond":
+  			newCollageNode.src="Images/FromBeyond.jpg";
+
+  		break;
+  		case "Cthuhlu":
+  			newCollageNode.src="Images/Cthulu.jpg";
+
+  		break;
+
+  		
+  		default:
+  			newCollageNode.src="Images/RandolphCarter2.jpg";
+
+  		break;
+  	}
   	theNode.appendChild(newCollageNode);
-  	
+  	}
 	
 }
 
